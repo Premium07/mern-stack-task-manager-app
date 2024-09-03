@@ -1,4 +1,4 @@
-const Joi = require("Joi");
+const Joi = require("joi");
 const Task = require("../models/task");
 
 // add a new task
