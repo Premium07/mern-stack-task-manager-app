@@ -27,4 +27,11 @@ app.use("/api", (req, res) => {
   res.status(200).json({ message: "Hello Express" });
 });
 
+app.get("/", (req, res) => {
+  res.send({
+    activeStatus: true,
+    error: false,
+  });
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
