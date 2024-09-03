@@ -1,19 +1,19 @@
-const Joi = require("joi");
+// const Joi = require("joi");
 const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // to register an user
-const registerSchema = Joi.object({
-  name: Joi.string().required(),
-  email: Joi.string().email().required(),
-  password: Joi.string().min(6).required(),
-});
+// const registerSchema = Joi.object({
+//   name: Joi.string().required(),
+//   email: Joi.string().email().required(),
+//   password: Joi.string().min(6).required(),
+// });
 
-const loginSchema = Joi.object({
-  email: Joi.string().email().required(),
-  password: Joi.string().min(6).required(),
-});
+// const loginSchema = Joi.object({
+//   email: Joi.string().email().required(),
+//   password: Joi.string().min(6).required(),
+// });
 
 const generateToken = (getId) => {
   return jwt.sign({ getId }, "DEFAULT_SECRET_KEY", {
