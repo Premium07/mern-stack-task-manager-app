@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const callRegisterUserApi = async (formData) => {
   const res = await axios.post(
-    "http://localhost:5000/api/user/register",
+    "https://mern-stack-task-manager-application-8baomy3gu.vercel.app/api/user/register",
     formData,
     { withCredentials: true }
   );
